@@ -5,3 +5,4 @@ Frontend - Reactjs
 Database  - mongodb
 
 Register  : http://localhost:3000/register
+{admin and user )
