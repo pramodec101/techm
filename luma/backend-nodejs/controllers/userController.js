@@ -14,10 +14,10 @@ const cryptr = new Cryptr(process.env.CRYPTR_KEY);
 
 // Register User
 const registerUser = asyncHandler(async (req, res) => {
-  const { name, email, password,designation ,department} = req.body;
-
+  const { name, email, password,designation ,department,role} = req.body;
+console.log(" req.body ", req.body)
   // Validation
-  if (!name || !email || !password|| !designation|| !department) {
+  if (!name || !email || !password|| !designation|| !department|| !role) {
     res.status(400);
     throw new Error("Please fill in all the required fields.");
   }
@@ -47,6 +47,7 @@ const registerUser = asyncHandler(async (req, res) => {
     designation,
     department,
     userAgent,
+    role
   });
 
   // Generate Token

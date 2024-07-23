@@ -19,13 +19,14 @@ const initialState = {
   email: "",
   designation: "",
   department: "",
+   role: "",
   password: "",
   password2: "",
 };
 
 const Register = () => {
   const [formData, setFormData] = useState(initialState);
-  const { name, email, password, password2,department,designation } = formData;
+  const { name, email, password, password2,department,designation ,role} = formData;
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -83,8 +84,9 @@ const Register = () => {
 
   const registerUser = async (e) => {
     e.preventDefault();
-
-    if (!name || !email || !password || !designation || !department) {
+    //console.log("role    ",role)
+//console.log("role   designation ",designation)
+    if (!name || !email || !password || !designation || !department|| !role) {
       return toast.error("All fields are required");
     }
     if (password.length < 6) {
@@ -101,6 +103,7 @@ const Register = () => {
       name,
       email,
       department,
+      role,
       designation,
       password,
     };
@@ -153,6 +156,12 @@ const Register = () => {
               value={department}
               onChange={handleInputChange}
             />
+             <select name="role" className="loan-input-form"    onChange={handleInputChange} >
+             <option value="">Select Role</option>
+              <option value="admin">Admin</option>
+              <option value="user">User</option>
+
+            </select>
             <input
               type="email"
               placeholder="Email"
