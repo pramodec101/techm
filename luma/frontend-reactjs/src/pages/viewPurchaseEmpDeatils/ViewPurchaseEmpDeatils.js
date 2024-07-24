@@ -107,7 +107,7 @@ const ViewPurchaseEmpDeatils = () => {
            
             {/* Table  <Link to={`/view-item-purchase/${_id}`}>{employee_id}</Link> */}
             {!isLoading && loans.length === 0 ? (
-              <p>No user found...</p>
+              <p>No data found...</p>
             ) : (
               <table>
                 <thead>

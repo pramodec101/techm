@@ -108,7 +108,7 @@ if (window.confirm("Are you want to approve?")) {
              
             {/* Table  <Link to={`/view-item-purchase/${_id}`}>{employee_id}</Link> */}
             {!isLoading && loans.length === 0 ? (
-              <p>No user found...</p>
+              <p>No data found...</p>
             ) : (
               <table>
                 <thead>
@@ -135,7 +135,7 @@ if (window.confirm("Are you want to approve?")) {
                 <tbody>
                   {currentItems.map((user, index) => {
                    // console.log("user  ",)
-                    const { _id, user_id,employee_id, item_category, item_description, item_make, item_value } = user;
+                    const { _id,employee_id, item_category, item_description, item_make, item_value } = user;
 //console.log("dddd>  user_id> ",user_id)
                     return (
                       <tr key={_id}>

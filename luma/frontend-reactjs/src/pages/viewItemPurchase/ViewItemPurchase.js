@@ -84,7 +84,7 @@ const ViewItemPurchase = () => {
          
             {/* Table */}
             {!isLoading && itemPurchages.length === 0 ? (
-              <p>No user found...</p>
+              <p>No data found...</p>
             ) : (
               <table>
                 <thead>
@@ -94,22 +94,24 @@ const ViewItemPurchase = () => {
                     <th>item name</th>
                     <th>item category</th>
                     <th>item valuation</th>
-                   
+                   <th>Date</th>
                   </tr>
                 </thead>
                 <tbody>
                   {currentItems.map((user, index) => {
-                    const { _id,user_id, employee_id, item_description,item_category ,item_value} = user;
-
+                    const { _id,updatedAt, employee_id, item_description,item_category ,item_value} = user;
+let purdate = updatedAt.split("T")[0]+" " +updatedAt.split("T")[1].split(".")[0]
+ //var elapsed = date.getDate()+ " " +date.getMonth()
                     return (
                       <tr key={_id}>
 
 
-                        <td> {user_id}</td>
+                        <td> {_id}</td>
                         <td> {item_description}</td>
                           <td> {employee_id}</td>
                             <td> {item_category}</td>
                               <td> {item_value}</td>
+                              <td>{purdate } </td>
 
 
                       </tr>

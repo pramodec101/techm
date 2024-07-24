@@ -108,7 +108,7 @@ const ViewLoanEmpDeatils = () => {
            
             {/* Table  <Link to={`/view-item-purchase/${_id}`}>{employee_id}</Link> */}
             {!isLoading && loans_d.length === 0 ? (
-              <p>No user found...</p>
+              <p>No data found...</p>
             ) : (
               <table>
                 <thead>
@@ -117,21 +117,21 @@ const ViewLoanEmpDeatils = () => {
                     <th>Loan Type</th>
                     <th>Duration</th>
                     <th>Card Issue Date</th>
-                 
+                  <th>Date</th>
                   
                   </tr>
                 </thead>
                 <tbody>
                   {currentItems.map((user, index) => {
-                    const { _id, item_category, item_description, item_make } = user;
-
+                    const { _id, item_category, item_description, item_make,updatedAt } = user;
+let purdate = updatedAt.split("T")[0]+" " +updatedAt.split("T")[1].split(".")[0]
                     return (
                       <tr key={_id}>
                         <td>{_id}</td>
                         <td>{item_category}</td>
                         <td>{item_description}</td>
                         <td>{item_make}</td>
-                    
+                    <td>{purdate}</td>
                          
                       </tr>
                     );
