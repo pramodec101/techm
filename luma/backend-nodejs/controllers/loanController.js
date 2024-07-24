@@ -120,7 +120,7 @@ const approveLoans = asyncHandler(async (req, res) => {
 const loanEmpDeails = asyncHandler(async (req, res) => {
   let loansdeatis = await ItemMaster.find({ user_id: req.params.id });
   //const loansdeatis = ItemMaster.find({_id:req.params.id});
-//console.log("pramod.id ",req.params.id)
+console.log("pramod.id>>> ",req.params.id)
 //console.log("req.params.id ",loansdeatis)
   if (!loansdeatis) {
     res.status(404);

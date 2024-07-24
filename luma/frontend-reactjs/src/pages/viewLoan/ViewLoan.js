@@ -35,7 +35,7 @@ const ViewItemPurchase = () => {
  
 
    const user = useSelector(selectUser);
- //const userId = user?._id;
+ const userId = user?._id;
 const userRole = user?.role;
   //const [uidod, setUidod] = useState("pramod");
 //setUidod("amit")
@@ -139,11 +139,11 @@ if (window.confirm("Are you want to approve?")) {
 //console.log("dddd>  user_id> ",user_id)
                     return (
                       <tr key={_id}>
-                        <td> <Link to={`/view-item-emp-details/${user_id}`}>{employee_id}</Link></td>
-                        <td> <Link to={`/view-item-emp-details/${user_id}`}>{item_category}</Link></td>
-                         <td> <Link to={`/view-item-emp-details/${user_id}`}>{item_description}</Link></td>
-                          <td> <Link to={`/view-item-emp-details/${user_id}`}>{item_make}</Link></td>
-                           <td> <Link to={`/view-item-emp-details/${user_id}`}>{item_value}</Link></td>
+                        <td> <Link to={`/view-item-emp-details/${userId}`}>{employee_id}</Link></td>
+                        <td> <Link to={`/view-item-emp-details/${userId}`}>{item_category}</Link></td>
+                         <td> <Link to={`/view-item-emp-details/${userId}`}>{item_description}</Link></td>
+                          <td> <Link to={`/view-item-emp-details/${userId}`}>{item_make}</Link></td>
+                           <td> <Link to={`/view-item-emp-details/${userId}`}>{item_value}</Link></td>
                          
             {(userRole === 'admin' && user.status === 'pending')  ? 
 ( <td> <button onClick={()=>approveLoan(_id)} >Approve</button></td>)
