@@ -21,8 +21,8 @@ import { UserDesignation,UserDepartment,UserEmpID } from "../../pages/dashboard/
 import { Link } from "react-router-dom";
 const ViewLoanEmpDeatils = () => {
   useRedirectLoggedOutUser("/login");
+  useRedirectLoggedOutUser("/");
   const dispatch = useDispatch();
-
   const [search, setSearch] = useState("");
 
   const { loans_d, isLoading } = useSelector(

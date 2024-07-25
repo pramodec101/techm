@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Card from "../../components/card/Card";
 import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
+import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
 import {
  RESET, applyloanUser
 } from "../../redux/features/auth/authSlice";
@@ -17,7 +18,7 @@ import {
 
 
 const LoanApply = () => {
-
+  useRedirectLoggedOutUser("/login");
    const user = useSelector(selectUser);
 
   const userId = user?._id;

@@ -2,11 +2,13 @@ import "./Dashboard.scss";
 import InfoBox from "../../components/infoBox/InfoBox";
 import {NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
+import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
 import {
   selectUser,
 } from "../../redux/features/auth/authSlice";
 
 const Dashboard = () => {
+   useRedirectLoggedOutUser("/login");
   const activeLink = ({ isActive }) => (isActive ? "active" : "");
 
   return (
