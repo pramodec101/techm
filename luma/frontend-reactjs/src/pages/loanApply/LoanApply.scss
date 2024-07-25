@@ -1,5 +1,6 @@
 .user-list {
   color: #333;
+
   .table {
     padding: 5px;
     width: 100%;
@@ -34,7 +35,8 @@
           display: flex;
           justify-content: flex-start;
           align-items: center;
-          > * {
+
+          >* {
             margin-right: 7px;
             cursor: pointer;
             vertical-align: middle;
@@ -50,6 +52,7 @@
       tr:nth-child(even) {
         background-color: #fff;
       }
+
       tbody {
         tr:hover {
           // cursor: pointer;
@@ -59,6 +62,7 @@
     }
   }
 }
+
 .button {
   background-color: aqua;
   /* Green */
@@ -70,10 +74,12 @@
   display: inline-block;
   font-size: 16px;
 }
+
 .aply-ln {
   width: 50% !important;
   /* padding: 0px 0px 0px 2px; */
 }
+
 input.loan-input-form {
   display: block;
   font-size: 1.6rem;
@@ -86,12 +92,17 @@ input.loan-input-form {
   border-radius: 3px;
   outline: none;
 }
+
 .sort {
   label {
     font-size: 1.4rem;
     font-weight: 500;
     margin: 0 5px;
   }
+select.loan-input-form {
+  width: 100%;
+  padding: 10px;
+}
   select {
     font-size: 1.6rem;
     font-weight: 300;

@@ -108,7 +108,7 @@ formData.user_id=userId;
               name="item_description"
               onChange={handleInputChange}
             />
-            <select name="item_category" className="loan-input-form"    onChange={handleInputChange} className="">
+            <select name="item_category" className="loan-input-form"    onChange={handleInputChange} >
               <option value="">-- Select Item Category -- </option>
               <option value="furniture">Furniture</option>
               <option value="mobile">Mobile</option>
@@ -122,7 +122,7 @@ formData.user_id=userId;
               name="item_value"
               onChange={handleInputChange}
             />
-<select name="item_make"  className="loan-input-form"   onChange={handleInputChange} className="">
+<select name="item_make"  className="loan-input-form"   onChange={handleInputChange} >
                 <option value="">-- Select Item Make -- </option>
               <option value="wodden">Wodden</option>
               <option value="fiber">Fiber</option>
