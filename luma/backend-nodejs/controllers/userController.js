@@ -1,6 +1,6 @@
 const asyncHandler = require("express-async-handler");
-//const User = require("../models/userModel");
-const User = require("../models/employeeMaster");
+const User = require("../models/userModel");
+
 const bcrypt = require("bcryptjs");
 const { generateToken, hashToken } = require("../utils");
 var parser = require("ua-parser-js");
@@ -95,7 +95,7 @@ const loginUser = asyncHandler(async (req, res) => {
 
   if (!user) {
     res.status(404);
-    throw new Error("User not found, please signup ..111");
+    throw new Error("User not found, please signup ");
   }
 
   const passwordIsCorrect = await bcrypt.compare(password, user.password);

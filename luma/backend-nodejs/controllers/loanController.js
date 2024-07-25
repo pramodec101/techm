@@ -1,6 +1,6 @@
 const asyncHandler = require("express-async-handler");
-//const User = require("../models/userModel");
-const User = require("../models/employeeMaster");
+const User = require("../models/userModel");
+
 const ItemMaster = require("../models/itemMaster");
 const bcrypt = require("bcryptjs");
 var parser = require("ua-parser-js");
