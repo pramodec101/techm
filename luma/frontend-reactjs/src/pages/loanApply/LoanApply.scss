@@ -100,8 +100,12 @@ input.loan-input-form {
     margin: 0 5px;
   }
 select.loan-input-form {
-  width: 100%;
-  padding: 10px;
+  width: 100% !important;
+  padding: 10px !important;
+}
+select.sln {
+  width: 100% !important;
+  padding: 10px !important;
 }
   select {
     font-size: 1.6rem;
